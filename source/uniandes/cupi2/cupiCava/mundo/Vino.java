@@ -95,7 +95,7 @@ public class Vino
     /**
      * Año de elaboración del vino.
      */
-    private int anoElaboracion;
+    private int anhoElaboracion; 
 
     /**
      * Contenido en azúcar del vino (gramos/litro).
@@ -140,12 +140,12 @@ public class Vino
      * @param pLugarOrigen Lugar de origen del vino. lugarElaboracion != null y lugarElaboracion != "".
      * @param pImagen Imagen del vino. pImagen != null && pImagen != "".
      */
-    public Vino( String pNombre, String pPresentacion, int pAnoElaboracion, double pContenidoAzucar, String pTipo, String pColor, String pLugarOrigen, String pImagen )
+    public Vino( String pNombre, String pPresentacion, int pAnhoElaboracion, double pContenidoAzucar, String pTipo, String pColor, String pLugarOrigen, String pImagen )
     {
     	this.nombre = pNombre;
         this.presentacion = pPresentacion;
-        this.anoElaboracion = pAnoElaboracion;
-        this.contenidoAzucar = pContenidoAzucar;
+        this.anhoElaboracion = pAnhoElaboracion;
+        this.contenidoAzucar = pContenidoAzucar; 
         this.tipo = pTipo;
         this.color = pColor;
         this.lugarOrigen = pLugarOrigen;
@@ -165,7 +165,7 @@ public class Vino
      */
     public String darNombre( )
     {
-        return nombre;
+        return this.nombre;
     }
 
     /**
@@ -174,16 +174,16 @@ public class Vino
      */
     public String darPresentacion( )
     {
-        return presentacion;
+        return this.presentacion;
     }
 
     /**
      * Retorna el año de elaboración del vino.
      * @return Año de elaboración del vino.
      */
-    public int darAnoElaboracion( )
+    public int darAnhoElaboracion( )
     {
-        return anoElaboracion;
+        return this.anhoElaboracion;
     }
 
     /**
@@ -192,7 +192,7 @@ public class Vino
      */
     public double darContenidoAzucar( )
     {
-        return contenidoAzucar;
+        return this.contenidoAzucar;
     }
 
     /**
@@ -201,7 +201,7 @@ public class Vino
      */
     public String darTipo( )
     {
-        return tipo;
+        return this.tipo;
     }
 
     /**
@@ -210,7 +210,7 @@ public class Vino
      */
     public String darColor( )
     {
-        return color;
+        return this.color;
     }
 
     /**
@@ -219,7 +219,7 @@ public class Vino
      */
     public String darLugarOrigen( )
     {
-        return lugarOrigen;
+        return this.lugarOrigen;
     }
 
     /**
@@ -228,7 +228,22 @@ public class Vino
      */
     public String darImagen( )
     {
-        return imagen;
+        return this.imagen;
+    }
+    
+    private int compararString(String actual, String otro) {
+    	int comparacion = actual.compareTo(otro);
+    	return comparacion == 0 ? 0 : (comparacion < 0 ? -1 : 1);
+    }
+    
+    // Metodo que centraliza la logica de comparación de números decimales
+    private int compararDecimales(double actual, double otro) {
+    	return actual == otro ? 0 : (actual < otro ? -1 : 1);
+    }
+    
+    // Metodo que centraliza la logica de comparación de números eneteros
+    private int compararEnteros(int actual, int otro) {
+    	return actual == otro ? 0 : (actual < otro ? -1 : 1);
     }
 
     /**
@@ -240,27 +255,9 @@ public class Vino
      */
     public int compararPorNombre( Vino pVino )
     {
-    	 // TODO Parte2 PuntoA: Implemente el método según la documentación dada.
-    	assert pVino != null : "El vino no puede ser nulo";
-
-        String nombreVino = pVino.darNombre( );
-        String nombre = this.nombre;   
-
-        int rVino = this.nombre.compareTo(nombreVino);
-
-
-        if ( rVino == 0 ) 
-        {
-            return 0;
-        } 
-        else if ( rVino > 0 ) 
-        {
-            return -1;
-        } 
-        else 
-        {
-            return 1;
-        }
+    	assert pVino != null : "El vino no puede ser nulo.";
+    	return compararString(this.nombre, pVino.darNombre());
+    	
     }
 
     /**
@@ -272,27 +269,9 @@ public class Vino
      */
     public int compararPorPresentacion( Vino pVino )
     {
-   	 // TODO Parte2 PuntoB: Implemente el método según la documentación dada.
-        assert pVino != null : "El vino no puede ser nulo";
-    	
-    	String presentacion = pVino.darPresentacion( );
-    	String presentacionVino = this.presentacion;
-    	
-    	int rPresenacion = presentacion.compareTo(presentacionVino);
-    	
-    	if ( rPresenacion == 0 ) 
-        {
-            return 0;
-        } 
-        else if ( rPresenacion > 0 ) 
-        {
-            return -1;
-        } 
-        else 
-        {
-            return 1;
-        }
-   }
+    	assert pVino != null : "El vino no puede ser nulo.";
+    	return compararString(this.presentacion, pVino.darPresentacion());
+    }
 
     /**
      * Compara dos vinos según el año de elaboración. <br>
@@ -301,22 +280,12 @@ public class Vino
      *         Retorna -1 si el vino pVino tiene un valor "MAYOR" para el año de elaboración. <br>
      *         Retorna 1 si el vino pVino tiene un valor "MENOR" para el año de elaboración. <br>
      */
-    public int compararPorAnoElaboracion( Vino pVino )
+    public int compararPorAnhoElaboracion( Vino pVino )
     {
-   	 // TODO Parte2 PuntoC: Implemente el método según la documentación dada.
-    	assert pVino != null : "El vino no puede ser nulo";
-
-        int anoElaboracion = this.anoElaboracion;
-        int anoDado = pVino.darAnoElaboracion( );  
-  
-        if ( anoElaboracion == anoDado )
-            return 0;
-        else if ( anoElaboracion < anoDado )
-            return -1;
-        else
-            return 1; 
+   	 assert pVino != null : "El vino no puede ser nulo.";
+   	 return compararEnteros(this.anhoElaboracion,pVino.darAnhoElaboracion());
    }
-
+ 
     /**
      * Compara dos vinos según el contenido en azúcar. <br>
      * @param pVino Vino contra el cual se está comparando. pVino !=null.
@@ -326,18 +295,8 @@ public class Vino
      */
     public int compararPorContenidoAzucar( Vino pVino )
     {
-   	 // TODO Parte2 PuntoD: Implemente el método según la documentación dada.
-    	assert pVino != null : "El vino no puede ser nulo";
-
-        double azucar = this.contenidoAzucar;
-        double azucarAct = pVino.darContenidoAzucar( );
-
-        if ( azucar == azucarAct )
-            return 0;
-        else if ( azucar < azucarAct )
-            return -1;
-        else
-            return 1;
+   	 assert pVino !=null : "El vino no puede ser nulo.";
+   	 return compararDecimales(this.contenidoAzucar,pVino.darContenidoAzucar());
    }
 
     /**
@@ -347,19 +306,10 @@ public class Vino
      *         Retorna -1 si el vino pVino tiene un valor "MAYOR" para el tipo. <br>
      *         Retorna 1 si el vino pVino tiene un valor "MENOR" para el tipo. <br>
      */
-    public String compararPorTipo( double contenidoAzucar)
+    public int compararPorTipo( Vino pVino)
     {
-   	 // TODO Parte2 PuntoE: Implemente el método según la documentación dada.
-    	 if (contenidoAzucar >= 0 && contenidoAzucar < 5)
-             return Vino.SECO;
-         else if (contenidoAzucar < 15)
-             return Vino.ABOCADO;
-         else if (contenidoAzucar < 30)
-             return Vino.SEMI_SECO; 
-         else if (contenidoAzucar < 50)
-             return Vino.SEMI_DULCE;
-         else
-             return Vino.DULCE; 
+   	 assert pVino != null : "El vino no puede ser nullo."; 
+   	 return compararString(this.tipo, pVino.darTipo());    
    }
 
     /**
@@ -371,21 +321,10 @@ public class Vino
      */
     public int compararPorColor( Vino pVino )
     {
-   	 // TODO Parte2 PuntoF: Implemente el método según la documentación dada.
-    	assert pVino != null : "El vino no puede ser nulo";
-
-        String color = this.color;
-        String colorSelec = pVino.darColor( );
-        
-        int rColor = color.compareTo(colorSelec);
-        
-        if ( rColor == 0 )
-            return 0;
-        else if ( rColor < 0 )
-            return -1;
-        else 
-            return 1;
+   	 assert pVino != null : "El vino no puedo ser nulo.";
+    return compararString(this.color, pVino.darColor());
     }
+
 
     /**
      * Compara dos vinos según el lugar de origen. <br>
@@ -396,20 +335,8 @@ public class Vino
      */
     public int compararPorLugarOrigen( Vino pVino )
     {
-   	 // TODO Parte2 PuntoG: Implemente el método según la documentación dada.
-    	assert pVino != null : "El vino no puede ser nulo";
-
-        String LugarOrigen = this.lugarOrigen;
-        String LugarOrigenDado = pVino.darLugarOrigen( );
-        
-        int rLugarOrigen = LugarOrigen.compareTo( LugarOrigenDado );
-        
-        if ( rLugarOrigen == 0 )
-            return 0;
-        else if ( rLugarOrigen < 0 )
-            return -1;
-        else
-            return 1;
+   	 assert pVino != null : "El vino no puede ser nulo.";
+   	 return compararString(this.lugarOrigen, pVino.darLugarOrigen());
    }
 
     /**
@@ -418,7 +345,7 @@ public class Vino
      */
     public String toString( )
     {
-        return nombre;
+        return this.nombre; 
     }
 
     // -----------------------------------------------------------------
@@ -427,15 +354,14 @@ public class Vino
 
     private void verificarInvariante( )
     {
-    	
-    	assert nombre != null && !nombre.trim( ).isEmpty( ) : " El nombre no puede estar vacio ";
-    	assert nombre.equals( darNombre( ) ) : "El nombre ya existe " ;
-    	assert presentacion != null && !presentacion.trim( ).isEmpty( ) : " la presentacion no puede estar vacia ";
-    	assert anoElaboracion > 0 : "El año debe ser mayor que 0 ";
-    	assert contenidoAzucar >= 0 : "El contenido de azucar debe ser mayor o igual a 0 ";
-    	assert tipo != null && !tipo.trim( ).isEmpty( ) : " El tipo no puede estar vacio ";
-    	assert color != null && !color.trim( ).isEmpty( ) : " el color no puede estar vacio ";
-    	assert lugarOrigen != null && !lugarOrigen.trim( ).isEmpty( ) : " el lugar de origen no puede estar vacio "; 
+        	assert nombre != null && !presentacion.trim().isEmpty() : "La presentación no puede estar vacia o ser nula.";
+        	assert anhoElaboracion > 0 : "El año de elaboración debe ser mayor que 0.";
+        	assert contenidoAzucar >= 0 : "El contenido de azucar debe ser mayor o igual a 0.";
+        	assert tipo != null && !tipo.trim().isEmpty() : "El tipo de vino no puede estar vacio o ser nulo.";
+        	assert color != null && !color.trim().isEmpty() : "El color del vino no puede estar vacio o ser nulo.";
+        	assert lugarOrigen != null && !lugarOrigen.trim().isEmpty() : "El lugar de origen no puede estar vacio o ser nulo.";
+        	assert imagen != null && !imagen.trim().isEmpty() : "La imagen del vino no puede estar vacia o ser nula.";
+ 
     	
     }
 
