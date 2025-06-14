@@ -15,7 +15,9 @@ import java.util.ArrayList;
 /**
  * Clase que representa la Cupi-Cava. <br>
  * <b>inv: </b> <br>
- * TODO Parte1 PuntoC: Declare la invariante de la clase.
+ * - La lista de vinos está inicializada (vinos != null). <br>
+ * - Ningún elemento de la lista es null. <br>
+ * - No hay vinos repetidos en la lista (no hay dos vinos con el mismo nombre). <br>
  */
 public class CupiCava
 {
@@ -187,7 +189,24 @@ public class CupiCava
     // Invariante
     // -----------------------------------------------------------------
 
-    // TODO Parte1 PuntoD: Documente e implemente el método verificarInvariante. Si lo desea puede crear métodos privados en esta parte.
+    /**
+     * Verifica que se cumpla el invariante de la clase.
+     */
+    private void verificarInvariante( )   
+    { 
+        for (int i = 0; i < vinos.size(); i++)
+        {
+            Vino vino1 = vinos.get(i);
+            assert vino1 != null : "Hay un vino null en la lista.";
+
+            for (int j = i + 1; j < vinos.size(); j++)
+            {
+                Vino vino2 = vinos.get(j);
+                assert !vino1.darNombre().equalsIgnoreCase(vino2.darNombre()) : "Hay vinos con nombres repetidos.";
+            }
+        }
+    }
+
 
     // -----------------------------------------------------------------
     // Puntos de Extensión
