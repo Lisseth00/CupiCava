@@ -23,7 +23,7 @@ import uniandes.cupi2.cupiCava.mundo.Vino;
  * Clase usada para verificar que los m�todos de la clase Vino est�n correctamente implementados.
  */
 public class VinoTest
-{
+{ 
     // -------------------------------------------------------------
     // Atributos
     // -------------------------------------------------------------
@@ -84,14 +84,14 @@ public class VinoTest
         assertNotNull( "El nombre del vino no fue inicializado.", vino1.darNombre( ) );
         assertEquals( "El nombre del vino no corresponde.", "nombre1", vino1.darNombre( ) );
 
-        assertNotNull( "La presentaci�n del vino no fue inicializada.", vino1.darPresentacion( ) );
-        assertEquals( "La presentaci�n del vino no corresponde.", Vino.BARRIL, vino1.darPresentacion( ) );
+        assertNotNull( "La presentación del vino no fue inicializada.", vino1.darPresentacion( ) );
+        assertEquals( "La presentación del vino no corresponde.", Vino.BARRIL, vino1.darPresentacion( ) );
 
-        assertNotNull( "El a�o de elaboraci�n del vino no fue inicializado.", vino1.darAnhoElaboracion( ) );
-        assertEquals( "El a�o de elaboraci�n del vino no corresponde.", 1991, vino1.darAnhoElaboracion( ) );
+        assertNotNull( "El año de elaboración del vino no fue inicializado.", vino1.darAnhoElaboracion( ) );
+        assertEquals( "El año de elaboración del vino no corresponde.", 1991, vino1.darAnhoElaboracion( ) );
 
-        assertNotNull( "El contenido en az�car del vino no fue inicializado.", vino1.darContenidoAzucar( ) );
-        assertEquals( "El contenido en az�car del vino no corresponde.", 10.0, vino1.darContenidoAzucar( ), 0.01 );
+        assertNotNull( "El contenido en azucar del vino no fue inicializado.", vino1.darContenidoAzucar( ) );
+        assertEquals( "El contenido en azucar del vino no corresponde.", 10.0, vino1.darContenidoAzucar( ), 0.01 );
 
         assertNotNull( "El tipo del vino no fue inicializado.", vino1.darTipo( ) );
         assertEquals( "El tipo del vino no corresponde.", Vino.ABOCADO, vino1.darTipo( ) );
@@ -119,9 +119,9 @@ public class VinoTest
     public void testCompararPorNombre( )
     {
 
-        assertEquals( "La comparaci�n deber�a tener como resultado 0 porque los nombres son iguales.", 0, vino1.compararPorNombre( vino4 ) );
-        assertEquals( "La comparaci�n deber�a tener como resultado -1 porque el vino1 es menor a vino2.", -1, vino1.compararPorNombre( vino2 ) );
-        assertEquals( "La comparaci�n deber�a tener como resultado 1 porque el vino3 es mayor a vino2.", 1, vino3.compararPorNombre( vino2 ) );
+        assertEquals( "La comparación deberia tener como resultado 0 porque los nombres son iguales.", 0, vino1.compararPorNombre( vino4 ) );
+        assertEquals( "La comparación deberia tener como resultado -1 porque el vino1 es menor a vino2.", -1, vino1.compararPorNombre( vino2 ) );
+        assertEquals( "La comparación deberia tener como resultado 1 porque el vino3 es mayor a vino2.", 1, vino3.compararPorNombre( vino2 ) );
     }
 
     /**
@@ -136,9 +136,9 @@ public class VinoTest
     public void testCompararPorPresentacion( )
     {
 
-        assertEquals( "La comparaci�n deber�a tener como resultado 0 porque las presentaciones son iguales.", 0, vino1.compararPorPresentacion( vino4 ) );
-        assertEquals( "La comparaci�n deber�a tener como resultado -1 porque el vino1 es menor a vino2.", -1, vino1.compararPorPresentacion( vino2 ) );
-        assertEquals( "La comparaci�n deber�a tener como resultado 1 porque el vino3 es mayor a vino1.", 1, vino3.compararPorPresentacion( vino1 ) );
+        assertEquals( "La comparación deberia tener como resultado 0 porque las presentaciones son iguales.", 0, vino1.compararPorPresentacion( vino4 ) );
+        assertEquals( "La comparación deberia tener como resultado -1 porque el vino1 es menor a vino2.", -1, vino1.compararPorPresentacion( vino2 ) );
+        assertEquals( "La comparación deberia tener como resultado 1 porque el vino3 es mayor a vino1.", 1, vino3.compararPorPresentacion( vino1 ) );
     }
 
     /**
@@ -153,9 +153,9 @@ public class VinoTest
     public void testCompararPorAnhoElaboracion( )
     {
 
-        assertEquals( "La comparaci�n deber�a tener como resultado 0 porque los a�os de elaboraci�n son iguales.", 0, vino1.compararPorAnhoElaboracion( vino4 ) );
-        assertEquals( "La comparaci�n deber�a tener como resultado -1 porque el vino1 es menor a vino2.", -1, vino1.compararPorAnhoElaboracion( vino2 ) );
-        assertEquals( "La comparaci�n deber�a tener como resultado 1 porque el vino3 es mayor a vino1.", 1, vino3.compararPorAnhoElaboracion( vino1 ) );
+        assertEquals( "La comparación deberia tener como resultado 0 porque los a�os de elaboraci�n son iguales.", 0, vino1.compararPorAnhoElaboracion( vino4 ) );
+        assertEquals( "La comparación deberia tener como resultado -1 porque el vino1 es menor a vino2.", -1, vino1.compararPorAnhoElaboracion( vino2 ) );
+        assertEquals( "La comparación deberia tener como resultado 1 porque el vino3 es mayor a vino1.", 1, vino3.compararPorAnhoElaboracion( vino1 ) );
     }
 
     /**
@@ -170,9 +170,9 @@ public class VinoTest
     public void testCompararPorContenidoAzucar( )
     {
 
-        assertEquals( "La comparaci�n deber�a tener como resultado 0 porque los contenidos en az�car son iguales.", 0, vino1.compararPorContenidoAzucar( vino4 ) );
-        assertEquals( "La comparaci�n deber�a tener como resultado -1 porque el vino1 es menor a vino2.", -1, vino1.compararPorContenidoAzucar( vino2 ) );
-        assertEquals( "La comparaci�n deber�a tener como resultado 1 porque el vino3 es mayor a vino1.", 1, vino3.compararPorContenidoAzucar( vino1 ) );
+        assertEquals( "La comparación deberia tener como resultado 0 porque los contenidos en az�car son iguales.", 0, vino1.compararPorContenidoAzucar( vino4 ) );
+        assertEquals( "La comparación deberia tener como resultado -1 porque el vino1 es menor a vino2.", -1, vino1.compararPorContenidoAzucar( vino2 ) );
+        assertEquals( "La comparación deberia tener como resultado 1 porque el vino3 es mayor a vino1.", 1, vino3.compararPorContenidoAzucar( vino1 ) );
     }
 
     /**
@@ -187,9 +187,9 @@ public class VinoTest
     public void testCompararPorTipo( )
     {
 
-        assertEquals( "La comparaci�n deber�a tener como resultado 0 porque los tipos son iguales.", 0, vino1.compararPorTipo( vino4 ) );
-        assertEquals( "La comparaci�n deber�a tener como resultado -1 porque el vino1 es menor a vino2.", -1, vino1.compararPorTipo( vino2 ) );
-        assertEquals( "La comparaci�n deber�a tener como resultado 1 porque el vino3 es mayor a vino1.", 1, vino3.compararPorTipo( vino1 ) );
+        assertEquals( "La comparación deberia tener como resultado 0 porque los tipos son iguales.", 0, vino1.compararPorTipo( vino4 ) );
+        assertEquals( "La comparación deberia tener como resultado -1 porque el vino1 es menor a vino2.", -1, vino1.compararPorTipo( vino2 ) );
+        assertEquals( "La comparación deberia tener como resultado 1 porque el vino3 es mayor a vino1.", 1, vino3.compararPorTipo( vino1 ) );
     }
 
     /**
@@ -228,9 +228,9 @@ public class VinoTest
         assertEquals("Los lugares de origen deberían ser iguales", 0, vino1.compararPorLugarOrigen(vino4));
 
         // Caso 2: vino1 es menor que vino2 por lugar de origen
-        assertTrue("vino1 debe ser menor que vino2 por lugar de origen", vino1.compararPorLugarOrigen(vino2) < 0);
+        assertTrue("vino 1 debe ser menor que vino 2 por lugar de origen", vino1.compararPorLugarOrigen(vino2) < 0);
 
         // Caso 3: vino3 es igual a vino1 por lugar de origen
-        assertEquals("vino3 y vino1 deben tener el mismo lugar de origen", 0, vino3.compararPorLugarOrigen(vino1));
+        assertEquals("vino 3 y vino 1 deben tener el mismo lugar de origen", 0, vino3.compararPorLugarOrigen(vino1));
    }
 }

@@ -119,18 +119,20 @@ public class CupiCava
      */
     public Vino buscarVinoMasDulce( )
     {
-   	 if (vinos == null || vinos.isEmpty()) {
-   		 return null;
-   	 }
-   	Vino masDulce = vinos.get(0); // Asumiendo que este elemento es el mas dulce
-   	for (int i = 1; i < vinos.size(); i++) {
-        Vino actual = vinos.get(i);
-        if (actual.darContenidoAzucar() > masDulce.darContenidoAzucar()) {
-            masDulce = actual; // Se encontró un vino más dulce
+    	if (vinos == null || vinos.isEmpty()) {
+            return null; 
         }
-    }
 
-    return masDulce;
+        Vino masDulce = vinos.get(0); // Asumiendo que este elemento es el mas dulce
+
+        for (int i = 1; i < vinos.size(); i++) {
+            Vino actual = vinos.get(i);
+            if (actual.darContenidoAzucar() > masDulce.darContenidoAzucar()) {
+                masDulce = actual; // Se encontró un vino más dulce
+            }
+        }
+
+        return masDulce;
     }
 
     /**
@@ -141,17 +143,20 @@ public class CupiCava
      */
     public Vino buscarVinoMasSeco( )
     {
-   	 if (vinos == null || vinos.isEmpty()) {
-   		 return null;
-   	 }
+    	if (vinos == null || vinos.isEmpty()) {
+            return null; 
+        }
+   	 
    	 Vino masSeco = vinos.get(0);
-   	 for (int i = 1; i < vinos.size();i++) {
-   		 Vino actual = vinos.get(i);
-   		 if(actual.darContenidoAzucar()< masSeco.darContenidoAzucar()) {
-   			 masSeco = actual;
-   		 }
+   	 
+   	 for ( int i = 1; i < vinos.size(); i++) {
+   		Vino actual = vinos.get(i);
+   		if (actual.darContenidoAzucar() < masSeco.darContenidoAzucar()) {
+   			masSeco = actual;
+   		}
+   				
    	 }
-   	 return masSeco; 
+   	 return masSeco;
    }
 
     /**
@@ -163,14 +168,16 @@ public class CupiCava
      */
     public ArrayList<Vino> buscarVinosDeTipo( String pTipo )
     {
-   	 ArrayList<Vino> resultado = new ArrayList<>();
-   	 
-   	 for (Vino vino : vinos) {
-   		 if(vino.darTipo().equalsIgnoreCase(pTipo)) {
-   			 resultado.add(vino); 
-   		 }
-   	 }
-   	 return resultado; 
+    	ArrayList<Vino> resultado = new ArrayList<>();
+    	
+    	for ( Vino vino : vinos) {
+    		if(vino.darTipo().equalsIgnoreCase(pTipo)) {
+    			resultado.add(vino);
+    			
+    		}
+    	} 
+    	
+    	return resultado;
    }
 
     /**
@@ -190,17 +197,20 @@ public class CupiCava
      */
     public boolean agregarVino( String pNombre, String pPresentacion, int pAnhoElaboracion, double pContenidoAzucar, String pTipo, String pColor, String pLugarOrigen, String pImagen )
     {
-        Vino buscado = buscarVino( pNombre );
-        if (buscado != null) {
+    	// buscar si ya existe un vino con el nombre ingresadoAdd commentMore actions
+        Vino buscado = buscarVino( pNombre ); 
+        if (buscado != null) 
+        {
         	return false; 
-        }
-        Vino vino = new Vino(pNombre, pPresentacion,pAnhoElaboracion, pContenidoAzucar, pTipo, pColor, pLugarOrigen, pImagen ); 
-        //Agregamos el nuevo vino a la lista
+    }
+Vino vino = new Vino( pNombre, pPresentacion, pAnhoElaboracion, pContenidoAzucar, pTipo, pColor, pLugarOrigen, pImagen );
+        
+        // Agregamos el nuevo vino a la lista
         vinos.add(vino);
         
-        // Utilizamos las invariantes
+        // Utilizamos las invariante
         verificarInvariante();
-        return false; 
+        return true;
     }
 
     /**
@@ -220,14 +230,14 @@ public class CupiCava
                 }
             }
         }
-   }
+    }
 
     /**
      * Ordena descendentemente la lista de vinos por a�o de elaboraci�n usando el algoritmo de selecci�n. <br>
      * <b>pre:</b> La lista de vinos est� inicializada. <br>
      * <b>post:</b> La lista de vinos est� ordenada por a�o de elaboraci�n (orden descendente).
      */
-    public void ordenarVinosPorAhnoElaboracion( )
+    public void ordenarVinosPorAnhoElaboracion( )
     {
     	for (int i = 0; i < vinos.size() - 1; i++) {
 	        int indiceMayor = i;
@@ -307,6 +317,6 @@ public class CupiCava
      */
     public String metodo2( )
     {
-        return "Respuesta 2.";
+        return "Respuesta 2."; 
     }
 }

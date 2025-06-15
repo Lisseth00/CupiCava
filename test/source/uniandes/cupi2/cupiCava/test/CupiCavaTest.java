@@ -27,7 +27,7 @@ import uniandes.cupi2.cupiCava.mundo.Vino;
 /**
  * Clase usada para verificar que los m�todos de la clase Cava est�n correctamente implementados.
  */
-public class CupiCavaTest
+public class CupiCavaTest 
 {
     // -------------------------------------------------------------
     // Atributos
@@ -235,8 +235,8 @@ public class CupiCavaTest
     {
         setupEscenario3( );
 
-        // Ordenar por año de elaboraciónAdd commentMore actions
-        cupiCava.ordenarVinosPorAnhoElaboracion();
+        // Ordenar por año de elaboración 
+        cupiCava.ordenarVinosPorAnhoElaboracion();  
 
         // Obtener los vinos ordenados
         ArrayList<Vino> vinos = cupiCava.darVinos();
@@ -287,7 +287,7 @@ public class CupiCavaTest
      */
     @Test
     public void testBuscarBinarioPorNombre( )
-    {
+    { 
         setupEscenario3( );
 
         cupiCava.ordenarVinosPorNombre( );
@@ -357,7 +357,7 @@ public class CupiCavaTest
         }
 
         vinos = cupiCava.buscarVinosDeTipo( Vino.SEMI_SECO );
-        assertEquals( "No se realiz� la b�squeda correctamente.", 3, vinos.size( ) );
+        assertEquals( "No se realizo la busqueda correctamente.", 3, vinos.size( ) );
 
         for( int i = 0; i < vinos.size( ); i++ )
         {

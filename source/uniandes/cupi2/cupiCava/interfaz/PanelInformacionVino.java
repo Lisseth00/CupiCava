@@ -1,6 +1,6 @@
 /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- * Universidad de los Andes (Bogotá - Colombia)
- * Departamento de Ingeniería de Sistemas y Computación 
+ * Universidad de los Andes (Bogotï¿½ - Colombia)
+ * Departamento de Ingenierï¿½a de Sistemas y Computaciï¿½n 
  * Licenciado bajo el esquema Academic Free License version 2.1 
  *
  * Proyecto Cupi2 (http://cupi2.uniandes.edu.co)
@@ -22,7 +22,7 @@ import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
 
 /**
- * Panel con la información detallada de un vino.
+ * Panel con la informaciï¿½n detallada de un vino.
  */
 public class PanelInformacionVino extends JPanel
 {
@@ -36,17 +36,17 @@ public class PanelInformacionVino extends JPanel
     private JTextField txtNombre;
 
     /**
-     * Campo de texto con la presentación del vino.
+     * Campo de texto con la presentaciï¿½n del vino.
      */
     private JTextField txtPresentacion;
 
     /**
-     * Campo de texto con el año de elaboración del vino.
+     * Campo de texto con el aï¿½o de elaboraciï¿½n del vino.
      */
     private JTextField txtAnhoElaboracion;
 
     /**
-     * Campo de texto con el contenido en azúcar del vino.
+     * Campo de texto con el contenido en azï¿½car del vino.
      */
     private JTextField txtContenidoAzucar;
 
@@ -75,11 +75,11 @@ public class PanelInformacionVino extends JPanel
     // -----------------------------------------------------------------
 
     /**
-     * Constructor del panel.
+     * Constructor del panel. 
      */
     public PanelInformacionVino( )
     {
-        setBorder( new TitledBorder( " Información del vino " ) );
+        setBorder( new TitledBorder( " InformaciÃ³n del vino " ) );
 
         JPanel panelAuxiliar = new JPanel( );
         panelAuxiliar.setLayout( new GridBagLayout( ) );
@@ -94,11 +94,11 @@ public class PanelInformacionVino extends JPanel
 
         panelAuxiliar.add( new JLabel( " Nombre: " ), gbc );
         gbc.gridy = 1;
-        panelAuxiliar.add( new JLabel( " Presentación: " ), gbc );
+        panelAuxiliar.add( new JLabel( " PresentaciÃ³n: " ), gbc );
         gbc.gridy = 2;
-        panelAuxiliar.add( new JLabel( " Año de elaboración: " ), gbc );
+        panelAuxiliar.add( new JLabel( " AÃ±o de elaboraciÃ³n: " ), gbc );
         gbc.gridy = 3;
-        panelAuxiliar.add( new JLabel( " Contenido de azúcar (g/l): " ), gbc );
+        panelAuxiliar.add( new JLabel( " Contenido de azucar (g/l): " ), gbc );
         gbc.gridy = 4;
         panelAuxiliar.add( new JLabel( " Tipo: " ), gbc );
         gbc.gridy = 5;
@@ -150,16 +150,16 @@ public class PanelInformacionVino extends JPanel
     }
 
     // -----------------------------------------------------------------
-    // Métodos
+    // Mï¿½todos
     // -----------------------------------------------------------------
 
     /**
-     * Actualiza la información del vino con la información que entra por parámetro.
+     * Actualiza la informaciï¿½n del vino con la informaciï¿½n que entra por parï¿½metro.
      * @param pNombre Nombre del vino. pNombre != null && pNombre != "".
-     * @param pPresentacion Presentación del vino. pPresentacion != null && pPresentacion != "" && (pPresentacion == BOTELLA || pPresentacion == BARRIL).
-     * @param pAnhoElaboracion Año de elaboración del vino. pAnhoElaboracion > 0.
-     * @param pContenidoAzucar Contenido en azúcar del vino. pContenidoAzucar >= 0
-     * @param pTipo Tipo de vino de acuerdo a su contenido en azúcar. pTipo != null && pTipo != "" && (pTipo == SECO || pTipo == ABOCADO || pTipo == SEMI_SECO || pTipo ==
+     * @param pPresentacion Presentaciï¿½n del vino. pPresentacion != null && pPresentacion != "" && (pPresentacion == BOTELLA || pPresentacion == BARRIL).
+     * @param pAnhoElaboracion Aï¿½o de elaboraciï¿½n del vino. pAnhoElaboracion > 0.
+     * @param pContenidoAzucar Contenido en azï¿½car del vino. pContenidoAzucar >= 0
+     * @param pTipo Tipo de vino de acuerdo a su contenido en azï¿½car. pTipo != null && pTipo != "" && (pTipo == SECO || pTipo == ABOCADO || pTipo == SEMI_SECO || pTipo ==
      *        SEMI_DULCE || pTipo == DULCE).
      * @param pColor Color del vino. pColor != null && pColor != "" && (pColor == TINTO || pColor == ROSADO || pColor == BLANCO).
      * @param pLugarOrigen Lugar de origen del vino. lugarElaboracion != null y lugarElaboracion != "".
