@@ -1,6 +1,6 @@
 /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- * Universidad de los Andes (Bogotá - Colombia)
- * Departamento de Ingeniería de Sistemas y Computación 
+ * Universidad de los Andes (Bogotï¿½ - Colombia)
+ * Departamento de Ingenierï¿½a de Sistemas y Computaciï¿½n 
  * Licenciado bajo el esquema Academic Free License version 2.1 
  *
  * Proyecto Cupi2 (http://cupi2.uniandes.edu.co)
@@ -11,6 +11,7 @@
 package uniandes.cupi2.cupiCava.interfaz;
 
 import java.awt.BorderLayout;
+
 import java.awt.GridLayout;
 import java.io.File;
 import java.io.FileInputStream;
@@ -27,16 +28,16 @@ import uniandes.cupi2.cupiCava.mundo.CupiCava;
 import uniandes.cupi2.cupiCava.mundo.Vino;
 
 /**
- * Ventana principal de la aplicación.
+ * Ventana principal de la aplicaciï¿½n.
  */
-public class InterfazCupiCava extends JFrame
+public class InterfazCupiCava extends JFrame 
 {
     // -----------------------------------------------------------------
     // Constantes
     // -----------------------------------------------------------------
 
     /**
-     * Constante que representa la ubicación del archivo con los datos de los vinos de la cava.
+     * Constante que representa la ubicaciï¿½n del archivo con los datos de los vinos de la cava.
      */
     private final static String RUTA_ARCHIVO = "./data/cava.properties";
 
@@ -69,12 +70,12 @@ public class InterfazCupiCava extends JFrame
     private PanelListaVinos panelListaVinos;
 
     /**
-     * Panel con la información detallada de un vino.
+     * Panel con la informaciï¿½n detallada de un vino.
      */
     private PanelInformacionVino panelInformacionVino;
 
     /**
-     * Panel con las opciones de ordenamiento y búsqueda.
+     * Panel con las opciones de ordenamiento y bï¿½squeda.
      */
     private PanelOpciones panelOpciones;
 
@@ -84,7 +85,7 @@ public class InterfazCupiCava extends JFrame
 
     /**
      * Constructor de la ventana principal.<br>
-     * <b> post: </b> Construye la ventana principal de la aplicación.
+     * <b> post: </b> Construye la ventana principal de la aplicaciï¿½n.
      */
     public InterfazCupiCava( )
     {
@@ -122,7 +123,7 @@ public class InterfazCupiCava extends JFrame
     }
 
     // -----------------------------------------------------------------
-    // Métodos
+    // Mï¿½todos
     // -----------------------------------------------------------------
 
     /**
@@ -200,7 +201,7 @@ public class InterfazCupiCava extends JFrame
      */
     private void actualizarLista( )
     {
-        ArrayList vinos = new ArrayList( );
+        ArrayList<String> vinos = new ArrayList<String>( );
         for( int i = 0; i < cupiCava.darVinos( ).size( ); i++ )
         {
             Vino actual = ( Vino )cupiCava.darVinos( ).get( i );
@@ -211,7 +212,7 @@ public class InterfazCupiCava extends JFrame
     }
 
     /**
-     * Actualiza la información del vino seleccionado.
+     * Actualiza la informaciï¿½n del vino seleccionado.
      * @param pNombreVino Nombre del vino seleccionado. pNombreVino != null && pNombreVino != "".
      */
     public void actualizarInfoVino( String pNombreVino )
@@ -231,12 +232,12 @@ public class InterfazCupiCava extends JFrame
     }
 
     /**
-     * Ordena la lista de vinos por año de elaboración.
+     * Ordena la lista de vinos por aï¿½o de elaboraciï¿½n.
      */
     public void ordenarPorAnhoElaboracion( )
     {
-        cupiCava.ordenarVinosPorAnhoElaboracion( );
-        actualizarLista( );
+        cupiCava.ordenarVinosPorAnhoElaboracion( ); 
+        actualizarLista( );   
     }
 
     /**
@@ -266,7 +267,7 @@ public class InterfazCupiCava extends JFrame
             }
             else
             {
-                JOptionPane.showMessageDialog( this, "No se encontró ningún vino con el nombre dado.", "Buscar vino por nombre", JOptionPane.INFORMATION_MESSAGE );
+                JOptionPane.showMessageDialog( this, "No se encontrï¿½ ningï¿½n vino con el nombre dado.", "Buscar vino por nombre", JOptionPane.INFORMATION_MESSAGE );
             }
         }
     }
@@ -294,7 +295,7 @@ public class InterfazCupiCava extends JFrame
     }
 
     /**
-     * Busca el vino más dulce.
+     * Busca el vino mï¿½s dulce.
      */
     public void buscarVinoMasDulce( )
     {
@@ -306,12 +307,12 @@ public class InterfazCupiCava extends JFrame
         }
         else
         {
-            JOptionPane.showMessageDialog( this, "La cava no tiene vinos.", "Buscar vino más dulce", JOptionPane.ERROR_MESSAGE );
+            JOptionPane.showMessageDialog( this, "La cava no tiene vinos.", "Buscar vino mï¿½s dulce", JOptionPane.ERROR_MESSAGE );
         }
     }
 
     /**
-     * Busca el vino más seco.
+     * Busca el vino mï¿½s seco.
      */
     public void buscarVinoMasSeco( )
     {
@@ -323,17 +324,17 @@ public class InterfazCupiCava extends JFrame
         }
         else
         {
-            JOptionPane.showMessageDialog( this, "La cava no tiene vinos.", "Buscar vino más seco", JOptionPane.ERROR_MESSAGE );
+            JOptionPane.showMessageDialog( this, "La cava no tiene vinos.", "Buscar vino mï¿½s seco", JOptionPane.ERROR_MESSAGE );
         }
     }
 
     /**
      * Agrega una nuevo vino a la cava con los valores dados.
      * @param pNombre Nombre del vino. pNombre != null && pNombre != "".
-     * @param pPresentacion Presentación del vino. pPresentacion != null && pPresentacion != "" && (pPresentacion == BOTELLA || pPresentacion == BARRIL).
-     * @param pAnhoElaboracion Año de elaboración del vino. pAnhoElaboracion > 0.
-     * @param pContenidoAzucar Contenido en azúcar del vino. pContenidoAzucar >= 0
-     * @param pTipo Tipo de vino de acuerdo a su contenido en azúcar. pTipo != null && pTipo != "" && (pTipo == SECO || pTipo == ABOCADO || pTipo == SEMI_SECO || pTipo ==
+     * @param pPresentacion Presentaciï¿½n del vino. pPresentacion != null && pPresentacion != "" && (pPresentacion == BOTELLA || pPresentacion == BARRIL).
+     * @param pAnhoElaboracion Aï¿½o de elaboraciï¿½n del vino. pAnhoElaboracion > 0.
+     * @param pContenidoAzucar Contenido en azï¿½car del vino. pContenidoAzucar >= 0
+     * @param pTipo Tipo de vino de acuerdo a su contenido en azï¿½car. pTipo != null && pTipo != "" && (pTipo == SECO || pTipo == ABOCADO || pTipo == SEMI_SECO || pTipo ==
      *        SEMI_DULCE || pTipo == DULCE).
      * @param pColor Color del vino. pColor != null && pColor != "" && (pColor == TINTO || pColor == ROSADO || pColor == BLANCO).
      * @param pLugarOrigen Lugar de origen del vino. lugarElaboracion != null y lugarElaboracion != "".
@@ -353,20 +354,20 @@ public class InterfazCupiCava extends JFrame
     }
 
     // -----------------------------------------------------------------
-    // Puntos de Extensión
+    // Puntos de Extensiï¿½n
     // -----------------------------------------------------------------
 
     /**
-     * Método para la extensión 1.
+     * Mï¿½todo para la extensiï¿½n 1.
      */
-    public void reqFuncOpcion1( )
+    public void reqFuncOpcion1( )  
     {
         String resultado = cupiCava.metodo1( );
         JOptionPane.showMessageDialog( this, resultado, "Respuesta", JOptionPane.INFORMATION_MESSAGE );
     }
 
     /**
-     * Método para la extensión 2.
+     * Mï¿½todo para la extensiï¿½n 2.
      */
     public void reqFuncOpcion2( )
     {
@@ -379,12 +380,12 @@ public class InterfazCupiCava extends JFrame
     // -----------------------------------------------------------------
 
     /**
-     * Este método ejecuta la aplicación, creando una nueva interfaz.
-     * @param pArgs Argumentos para la ejecución de la aplicación. En este caso no son necesarios. pArgs != null.
+     * Este mï¿½todo ejecuta la aplicaciï¿½n, creando una nueva interfaz.
+     * @param pArgs Argumentos para la ejecuciï¿½n de la aplicaciï¿½n. En este caso no son necesarios. pArgs != null.
      */
     public static void main( String[] pArgs )
     {
         InterfazCupiCava interfaz = new InterfazCupiCava( );
         interfaz.setVisible( true );
-    }
+    } 
 }

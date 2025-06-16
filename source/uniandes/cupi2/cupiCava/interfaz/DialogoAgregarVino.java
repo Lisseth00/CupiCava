@@ -1,6 +1,6 @@
 /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- * Universidad de los Andes (Bogotá - Colombia)
- * Departamento de Ingeniería de Sistemas y Computación 
+ * Universidad de los Andes (Bogotï¿½ - Colombia)
+ * Departamento de Ingenierï¿½a de Sistemas y Computaciï¿½n 
  * Licenciado bajo el esquema Academic Free License version 2.1 
  *
  * Proyecto Cupi2 (http://cupi2.uniandes.edu.co)
@@ -11,6 +11,7 @@
 package uniandes.cupi2.cupiCava.interfaz;
 
 import java.awt.BorderLayout;
+
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -25,10 +26,10 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
-import uniandes.cupi2.cupiCava.mundo.Vino;
+import uniandes.cupi2.cupiCava.mundo.Vino; 
 
 /**
- * Diálogo que permite agregar un nuevo vino a la cava.
+ * Diï¿½logo que permite agregar un nuevo vino a la cava.
  */
 public class DialogoAgregarVino extends JDialog implements ActionListener
 {
@@ -51,7 +52,7 @@ public class DialogoAgregarVino extends JDialog implements ActionListener
     // -----------------------------------------------------------------
 
     /**
-     * Ventana principal de la aplicación
+     * Ventana principal de la aplicaciï¿½n
      */
     private InterfazCupiCava principal;
 
@@ -67,15 +68,15 @@ public class DialogoAgregarVino extends JDialog implements ActionListener
     /**
      * Combo box con las presentaciones del vino.
      */
-    private JComboBox comboPresentacion;
+    private JComboBox<String> comboPresentacion;
 
     /**
-     * Campo de texto con el año de elaboración del vino.
+     * Campo de texto con el aï¿½o de elaboraciï¿½n del vino.
      */
     private JTextField txtAnhoElaboracion;
 
     /**
-     * Campo de texto con el contenido en azúcar del vino.
+     * Campo de texto con el contenido en azï¿½car del vino.
      */
     private JTextField txtContenidoAzucar;
 
@@ -92,20 +93,20 @@ public class DialogoAgregarVino extends JDialog implements ActionListener
     /**
      * Combo box con los tipos de vino.
      */
-    private JComboBox comboTipo;
+    private JComboBox<String> comboTipo;
 
     /**
      * Combo box con los colores del vino.
      */
-    private JComboBox comboColor;
+    private JComboBox<String> comboColor;
 
     /**
-     * Botón para agregar.
+     * Botï¿½n para agregar.
      */
     private JButton btnAgregar;
 
     /**
-     * Botón para seleccionar.
+     * Botï¿½n para seleccionar.
      */
     private JButton btnSeleccionar;
 
@@ -114,8 +115,8 @@ public class DialogoAgregarVino extends JDialog implements ActionListener
     // -----------------------------------------------------------------
 
     /**
-     * Constructor del diálogo.
-     * @param pPrincipal Ventana principal de la aplicación. pPrincipal != null.
+     * Constructor del diï¿½logo.
+     * @param pPrincipal Ventana principal de la aplicaciï¿½n. pPrincipal != null.
      */
     public DialogoAgregarVino( InterfazCupiCava pPrincipal )
     {
@@ -135,22 +136,22 @@ public class DialogoAgregarVino extends JDialog implements ActionListener
         txtNombre = new JTextField( );
         panelInfo1.add( txtNombre );
 
-        panelInfo1.add( new JLabel( "Presentación:" ) );
-        comboPresentacion = new JComboBox( );
+        panelInfo1.add( new JLabel( "PresentaciÃ³n:" ) );
+        comboPresentacion = new JComboBox<String>( );
         comboPresentacion.addItem( Vino.BARRIL );
         comboPresentacion.addItem( Vino.BOTELLA );
         panelInfo1.add( comboPresentacion );
 
-        panelInfo1.add( new JLabel( "Año de elaboración:" ) );
+        panelInfo1.add( new JLabel( "AÃ±o de elaboraciÃ³n:" ) );
         txtAnhoElaboracion = new JTextField( );
         panelInfo1.add( txtAnhoElaboracion );
 
-        panelInfo1.add( new JLabel( "Contenido en azúcar (g/l):" ) );
+        panelInfo1.add( new JLabel( "Contenido en azucar (g/l):" ) );
         txtContenidoAzucar = new JTextField( );
         panelInfo1.add( txtContenidoAzucar );
 
         panelInfo1.add( new JLabel( "Tipo:" ) );
-        comboTipo = new JComboBox( );
+        comboTipo = new JComboBox<String>( );
         comboTipo.addItem( Vino.SECO );
         comboTipo.addItem( Vino.ABOCADO );
         comboTipo.addItem( Vino.SEMI_SECO );
@@ -163,7 +164,7 @@ public class DialogoAgregarVino extends JDialog implements ActionListener
         panelInfo1.add( txtLugarOrigen );
 
         panelInfo1.add( new JLabel( "Color:" ) );
-        comboColor = new JComboBox( );
+        comboColor = new JComboBox<String>( );
         comboColor.addItem( Vino.BLANCO );
         comboColor.addItem( Vino.TINTO );
         comboColor.addItem( Vino.ROSADO );
@@ -194,12 +195,12 @@ public class DialogoAgregarVino extends JDialog implements ActionListener
     }
 
     // -----------------------------------------------------------------
-    // Métodos
+    // Mï¿½todos
     // -----------------------------------------------------------------
 
     /**
      * Manejo de los eventos de los botones.
-     * @param pEvento Acción que generó el evento.
+     * @param pEvento Acciï¿½n que generï¿½ el evento.
      */
     public void actionPerformed( ActionEvent pEvento )
     {
@@ -250,23 +251,23 @@ public class DialogoAgregarVino extends JDialog implements ActionListener
                         {
                             if( tipo.equals( Vino.SECO ) && azucar > 5 )
                             {
-                                JOptionPane.showMessageDialog( this, "El contenido en azúcar debe estar entre 0 y 5 si el tipo es seco.", "Agregar vino", JOptionPane.ERROR_MESSAGE );
+                                JOptionPane.showMessageDialog( this, "El contenido en azï¿½car debe estar entre 0 y 5 si el tipo es seco.", "Agregar vino", JOptionPane.ERROR_MESSAGE );
                             }
                             else if( tipo.equals( Vino.ABOCADO ) && ( azucar < 5 || azucar > 15 ) )
                             {
-                                JOptionPane.showMessageDialog( this, "El contenido en azúcar debe estar entre 5 y 15 si el tipo es abocado.", "Agregar vino", JOptionPane.ERROR_MESSAGE );
+                                JOptionPane.showMessageDialog( this, "El contenido en azï¿½car debe estar entre 5 y 15 si el tipo es abocado.", "Agregar vino", JOptionPane.ERROR_MESSAGE );
                             }
                             else if( tipo.equals( Vino.SEMI_SECO ) && ( azucar < 15 || azucar > 30 ) )
                             {
-                                JOptionPane.showMessageDialog( this, "El contenido en azúcar debe estar entre 15 y 30 si el tipo es semi seco.", "Agregar vino", JOptionPane.ERROR_MESSAGE );
+                                JOptionPane.showMessageDialog( this, "El contenido en azï¿½car debe estar entre 15 y 30 si el tipo es semi seco.", "Agregar vino", JOptionPane.ERROR_MESSAGE );
                             }
                             else if( tipo.equals( Vino.SEMI_DULCE ) && ( azucar < 30 || azucar > 50 ) )
                             {
-                                JOptionPane.showMessageDialog( this, "El contenido en azúcar debe estar entre 30 y 50 si el tipo es semi dulce.", "Agregar vino", JOptionPane.ERROR_MESSAGE );
+                                JOptionPane.showMessageDialog( this, "El contenido en azï¿½car debe estar entre 30 y 50 si el tipo es semi dulce.", "Agregar vino", JOptionPane.ERROR_MESSAGE );
                             }
                             else if( tipo.equals( Vino.DULCE ) && azucar < 50 )
                             {
-                                JOptionPane.showMessageDialog( this, "El contenido en azúcar debe ser mayor a 50 si el tipo es dulce.", "Agregar vino", JOptionPane.ERROR_MESSAGE );
+                                JOptionPane.showMessageDialog( this, "El contenido en azï¿½car debe ser mayor a 50 si el tipo es dulce.", "Agregar vino", JOptionPane.ERROR_MESSAGE );
                             }
                             else
                             {
@@ -276,22 +277,22 @@ public class DialogoAgregarVino extends JDialog implements ActionListener
                         }
                         else
                         {
-                            JOptionPane.showMessageDialog( this, "El contenido en azúcar debe ser mayor o igual a cero.", "Agregar vino", JOptionPane.ERROR_MESSAGE );
+                            JOptionPane.showMessageDialog( this, "El contenido en azï¿½car debe ser mayor o igual a cero.", "Agregar vino", JOptionPane.ERROR_MESSAGE );
                         }
                     }
                     else
                     {
-                        JOptionPane.showMessageDialog( this, "El año de elaboración debe ser mayor a cero.", "Agregar vino", JOptionPane.ERROR_MESSAGE );
+                        JOptionPane.showMessageDialog( this, "El aï¿½o de elaboraciï¿½n debe ser mayor a cero.", "Agregar vino", JOptionPane.ERROR_MESSAGE );
                     }
                 }
                 catch( NumberFormatException ex )
                 {
-                    JOptionPane.showMessageDialog( this, "El año de elaboración y el contenido en azúcar del vino deben ser valores numéricos.", "Agregar vino", JOptionPane.ERROR_MESSAGE );
+                    JOptionPane.showMessageDialog( this, "El aï¿½o de elaboraciï¿½n y el contenido en azï¿½car del vino deben ser valores numï¿½ricos.", "Agregar vino", JOptionPane.ERROR_MESSAGE );
                 }
             }
             else
             {
-                JOptionPane.showMessageDialog( this, "Por favor ingrese la información completa del vino.", "Agregar vino", JOptionPane.ERROR_MESSAGE );
+                JOptionPane.showMessageDialog( this, "Por favor ingrese la informaciï¿½n completa del vino.", "Agregar vino", JOptionPane.ERROR_MESSAGE );
             }
         }
     }

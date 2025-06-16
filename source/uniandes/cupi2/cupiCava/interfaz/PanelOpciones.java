@@ -1,6 +1,6 @@
 /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- * Universidad de los Andes (Bogotá - Colombia)
- * Departamento de Ingeniería de Sistemas y Computación 
+ * Universidad de los Andes (Bogotï¿½ - Colombia)
+ * Departamento de Ingenierï¿½a de Sistemas y Computaciï¿½n 
  * Licenciado bajo el esquema Academic Free License version 2.1 
  *
  * Proyecto Cupi2 (http://cupi2.uniandes.edu.co)
@@ -22,7 +22,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.border.TitledBorder;
 
 /**
- * Panel con las opciones de ordenamiento y búsqueda.
+ * Panel con las opciones de ordenamiento y bï¿½squeda.
  */
 public class PanelOpciones extends JPanel implements ActionListener
 {
@@ -41,46 +41,46 @@ public class PanelOpciones extends JPanel implements ActionListener
     private final static String BUSCAR = "Buscar";
 
     /**
-     * Constante que representa la opción de ordenamiento por nombre.
+     * Constante que representa la opciï¿½n de ordenamiento por nombre.
      */
     private final static String ORDENAR_NOMBRE = "Nombre";
 
     /**
-     * Constante que representa la opción de ordenamiento por año de elaboración.
+     * Constante que representa la opciï¿½n de ordenamiento por aï¿½o de elaboraciï¿½n.
      */
-    private final static String ORDENAR_ANHO = "Año de elaboración";
+    private final static String ORDENAR_ANHO = "Aï¿½o de elaboraciï¿½n";
 
     /**
-     * Constante que representa la opción de ordenamiento por lugar de origen.
+     * Constante que representa la opciï¿½n de ordenamiento por lugar de origen.
      */
     private final static String ORDENAR_ORIGEN = "Lugar de origen";
 
     /**
-     * Constante que representa la opción de búsqueda por nombre.
+     * Constante que representa la opciï¿½n de bï¿½squeda por nombre.
      */
     private final static String BUSCAR_NOMBRE = "Nombre";
 
     /**
-     * Constante que representa la opción de búsqueda por tipo.
+     * Constante que representa la opciï¿½n de bï¿½squeda por tipo.
      */
     private final static String BUSCAR_TIPO = "Tipo";
 
     /**
-     * Constante que representa la opción de búsqueda del vino más dulce.
+     * Constante que representa la opciï¿½n de bï¿½squeda del vino mï¿½s dulce.
      */
-    private final static String BUSCAR_MAS_DULCE = "Más dulce";
+    private final static String BUSCAR_MAS_DULCE = "Mï¿½s dulce";
 
     /**
-     * Constante que representa la opción de búsqueda del vino más seco.
+     * Constante que representa la opciï¿½n de bï¿½squeda del vino mï¿½s seco.
      */
-    private final static String BUSCAR_MAS_SECO = "Más seco";
+    private final static String BUSCAR_MAS_SECO = "Mï¿½s seco";
 
     // -----------------------------------------------------------------
     // Atributos
     // -----------------------------------------------------------------
 
     /**
-     * Ventana principal de la aplicación.
+     * Ventana principal de la aplicaciï¿½n.
      */
     private InterfazCupiCava principal;
 
@@ -91,20 +91,20 @@ public class PanelOpciones extends JPanel implements ActionListener
     /**
      * Combo box con las opciones de ordenamiento.
      */
-    private JComboBox comboOrdenamiento;
+    private JComboBox<String> comboOrdenamiento;
 
     /**
-     * Combo box con las opciones de búsqueda.
+     * Combo box con las opciones de bï¿½squeda.
      */
-    private JComboBox comboBusqueda;
+    private JComboBox<String> comboBusqueda;
 
     /**
-     * Botón para ordenar.
+     * Botï¿½n para ordenar.
      */
     private JButton btnOrdenar;
 
     /**
-     * Botón para buscar.
+     * Botï¿½n para buscar.
      */
     private JButton btnBuscar;
 
@@ -114,9 +114,9 @@ public class PanelOpciones extends JPanel implements ActionListener
 
     /**
      * Constructor del panel.
-     * @param pPrincipal Ventana principal de la aplicación. pPrincipal != null.
+     * @param pPrincipal Ventana principal de la aplicaciï¿½n. pPrincipal != null.
      */
-    public PanelOpciones( InterfazCupiCava pPrincipal )
+    public PanelOpciones( InterfazCupiCava pPrincipal )  
     {
         principal = pPrincipal;
 
@@ -126,7 +126,7 @@ public class PanelOpciones extends JPanel implements ActionListener
         aux.setLayout( new GridLayout( 1, 2 ) );
         aux.setBorder( new CompoundBorder( new EmptyBorder( 0, 10, 0, 10 ), new TitledBorder( "Ordenar" ) ) );
 
-        comboOrdenamiento = new JComboBox( );
+        comboOrdenamiento = new JComboBox<String>( );
         comboOrdenamiento.setBorder( new EmptyBorder( 0, 0, 0, 10 ) );
         comboOrdenamiento.addItem( ORDENAR_NOMBRE );
         comboOrdenamiento.addItem( ORDENAR_ANHO );
@@ -144,7 +144,7 @@ public class PanelOpciones extends JPanel implements ActionListener
         aux2.setLayout( new GridLayout( 1, 2 ) );
         aux2.setBorder( new CompoundBorder( new EmptyBorder( 0, 10, 0, 10 ), new TitledBorder( "Buscar" ) ) );
 
-        comboBusqueda = new JComboBox( );
+        comboBusqueda = new JComboBox<String>( ); 
         comboBusqueda.setBorder( new EmptyBorder( 0, 0, 0, 10 ) );
         comboBusqueda.addItem( BUSCAR_NOMBRE );
         comboBusqueda.addItem( BUSCAR_TIPO );
@@ -162,7 +162,7 @@ public class PanelOpciones extends JPanel implements ActionListener
 
     /**
      * Manejo de los eventos de los botones.
-     * @param pEvento Acción que generó el evento.
+     * @param pEvento Acciï¿½n que generï¿½ el evento.
      */
     public void actionPerformed( ActionEvent pEvento )
     {

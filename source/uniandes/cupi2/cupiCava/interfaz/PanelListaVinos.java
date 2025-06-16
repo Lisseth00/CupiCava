@@ -1,6 +1,6 @@
 /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- * Universidad de los Andes (Bogotá - Colombia)
- * Departamento de Ingeniería de Sistemas y Computación 
+ * Universidad de los Andes (Bogotï¿½ - Colombia)
+ * Departamento de Ingenierï¿½a de Sistemas y Computaciï¿½n 
  * Licenciado bajo el esquema Academic Free License version 2.1 
  *
  * Proyecto Cupi2 (http://cupi2.uniandes.edu.co)
@@ -49,7 +49,7 @@ public class PanelListaVinos extends JPanel implements ListSelectionListener, Ac
     // -----------------------------------------------------------------
 
     /**
-     * Ventana principal de la aplicación.
+     * Ventana principal de la aplicaciï¿½n.
      */
     private InterfazCupiCava principal;
 
@@ -60,7 +60,7 @@ public class PanelListaVinos extends JPanel implements ListSelectionListener, Ac
     /**
      * Lista de los vinos.
      */
-    // TODO Parte3 PuntoA: Declare el atributo listaVinos de tipo JList.
+    private JList<String>listaVinos; 
 
     /**
      * Panel con un scroll que contiene a listaVinos.
@@ -68,7 +68,7 @@ public class PanelListaVinos extends JPanel implements ListSelectionListener, Ac
     private JScrollPane scroll;
 
     /**
-     * Botón para agregar un nuevo vino.
+     * Botï¿½n para agregar un nuevo vino.
      */
     private JButton botonAgregar;
 
@@ -78,20 +78,32 @@ public class PanelListaVinos extends JPanel implements ListSelectionListener, Ac
 
     /**
      * Constructor del panel.
-     * @param pPrincipal Ventana principal de la aplicación. pPrincipal != null.
+     * @param pPrincipal Ventana principal de la aplicaciï¿½n. pPrincipal != null.
      */
     public PanelListaVinos( InterfazCupiCava pPrincipal )
-    {
+    {  
         principal = pPrincipal;
 
         setLayout( new BorderLayout( ) );
         setBorder( new CompoundBorder( new EmptyBorder( 0, 5, 0, 5 ), new TitledBorder( "Lista de vinos" ) ) );
         setPreferredSize( new Dimension( 250, 0 ) );
 
-        // TODO Parte3 PuntoB: Inicializar la lista de vinos y agregarle un ListSelectionListener
+        listaVinos = new JList<String>();
+        listaVinos.addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e) {
+                if (!e.getValueIsAdjusting()) {
+                    String seleccionado = listaVinos.getSelectedValue();
+                    if (seleccionado != null) {
+                        principal.actualizarInfoVino(seleccionado);
+                    }
+                }
+            }
+        });
         
 
-     // TODO Parte3 PuntoC: Inicializar el scroll.
+    
+        scroll = new JScrollPane(listaVinos);
         scroll.setHorizontalScrollBarPolicy( JScrollPane.HORIZONTAL_SCROLLBAR_NEVER );
         scroll.setVerticalScrollBarPolicy( JScrollPane.VERTICAL_SCROLLBAR_ALWAYS );
         scroll.setBorder( new CompoundBorder( new EmptyBorder( 3, 3, 3, 3 ), new LineBorder( Color.BLACK, 1 ) ) );
@@ -105,16 +117,16 @@ public class PanelListaVinos extends JPanel implements ListSelectionListener, Ac
     }
 
     // -----------------------------------------------------------------
-    // Métodos
+    // Mï¿½todos
     // -----------------------------------------------------------------
 
     /**
-     * Actualiza la lista de vinos con la lista recibida por parámetro.
+     * Actualiza la lista de vinos con la lista recibida por parï¿½metro.
      * @param pListaVinos Lista de los vinos. pListaVinos != null.
      */
-    public void refrescarLista( ArrayList pListaVinos )
+    public void refrescarLista( ArrayList<String> pListaVinos )
     {
-        listaVinos.setListData( pListaVinos.toArray( ) );
+        listaVinos.setListData( pListaVinos.toArray(new String[0] ) );
         if( !pListaVinos.isEmpty( ) )
         {
             listaVinos.setSelectedIndex( 0 );
@@ -128,13 +140,13 @@ public class PanelListaVinos extends JPanel implements ListSelectionListener, Ac
     public void seleccionar( String pNombreVino )
     {
         int indice = -1;
-        ListModel model = listaVinos.getModel( );
+        ListModel<String> model = listaVinos.getModel( );
         for( int i = 0; i < model.getSize( ); i++ )
         {
-            String vinoActual = ( String )model.getElementAt( i );
+            String vinoActual = model.getElementAt( i );
             if( vinoActual.equals( pNombreVino ) )
             {
-                indice = i;
+                indice = i; 
             }
         }
 
@@ -144,20 +156,20 @@ public class PanelListaVinos extends JPanel implements ListSelectionListener, Ac
 
     /**
      * Atiende el evento cuando el usuario selecciona un vino de la lista.
-     * @param pEvento Evento de selección de un elemento de la lista de vinos. pEvento != null.
+     * @param pEvento Evento de selecciï¿½n de un elemento de la lista de vinos. pEvento != null.
      */
     public void valueChanged( ListSelectionEvent pEvento )
     {
         if( listaVinos.getSelectedValue( ) != null )
         {
-            String nombreVino = ( String )listaVinos.getSelectedValue( );
+            String nombreVino = listaVinos.getSelectedValue( );
             principal.actualizarInfoVino( nombreVino );
         }
     }
-
+ 
     /**
      * Manejo de los eventos de los botones.
-     * @param pEvento Acción que generó el evento.
+     * @param pEvento Acciï¿½n que generï¿½ el evento.
      */
     public void actionPerformed( ActionEvent pEvento )
     {

@@ -1,6 +1,6 @@
 /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- * Universidad de los Andes (Bogotá - Colombia)
- * Departamento de Ingeniería de Sistemas y Computación 
+ * Universidad de los Andes (Bogotï¿½ - Colombia)
+ * Departamento de Ingenierï¿½a de Sistemas y Computaciï¿½n 
  * Licenciado bajo el esquema Academic Free License version 2.1 
  *
  * Proyecto Cupi2 (http://cupi2.uniandes.edu.co)
@@ -25,25 +25,25 @@ import uniandes.cupi2.cupiCava.mundo.CupiCava;
 import uniandes.cupi2.cupiCava.mundo.Vino;
 
 /**
- * Clase usada para verificar que los métodos de la clase Cava estén correctamente implementados.
+ * Clase usada para verificar que los mï¿½todos de la clase Cava estï¿½n correctamente implementados.
  */
-public class CupiCavaTest
+public class CupiCavaTest 
 {
     // -------------------------------------------------------------
     // Atributos
     // -------------------------------------------------------------
 
     /**
-     * Clase donde se harán las pruebas.
+     * Clase donde se harï¿½n las pruebas.
      */
     private CupiCava cupiCava;
 
     // -------------------------------------------------------------
-    // Métodos
+    // Mï¿½todos
     // -------------------------------------------------------------
 
     /**
-     * Escenario 1: Construye una nueva cava vacía.
+     * Escenario 1: Construye una nueva cava vacï¿½a.
      */
     @Before
     public void setupEscenario1( )
@@ -59,8 +59,8 @@ public class CupiCavaTest
         cupiCava = new CupiCava( );
 
         cupiCava.agregarVino( "Alamos Chardonnay", Vino.BOTELLA, 2006, 35, Vino.SEMI_DULCE, Vino.BLANCO, "Mendoza, Argentina", "imagen1" );
-        cupiCava.agregarVino( "Marqués de Griñon Reserva", Vino.BARRIL, 2000, 7, Vino.ABOCADO, Vino.TINTO, "Toledo, España", "imagen2" );
-        cupiCava.agregarVino( "Castillo de Javier", Vino.BOTELLA, 2006, 20, Vino.SEMI_SECO, Vino.ROSADO, "Navarra, España", "imagen3" );
+        cupiCava.agregarVino( "Marquï¿½s de Griï¿½on Reserva", Vino.BARRIL, 2000, 7, Vino.ABOCADO, Vino.TINTO, "Toledo, Espaï¿½a", "imagen2" );
+        cupiCava.agregarVino( "Castillo de Javier", Vino.BOTELLA, 2006, 20, Vino.SEMI_SECO, Vino.ROSADO, "Navarra, Espaï¿½a", "imagen3" );
     }
 
     /**
@@ -71,17 +71,17 @@ public class CupiCavaTest
         cupiCava = new CupiCava( );
 
         cupiCava.agregarVino( "Alamos Chardonnay", Vino.BOTELLA, 2006, 35, Vino.SEMI_DULCE, Vino.BLANCO, "Mendoza, Argentina", "imagen1" );
-        cupiCava.agregarVino( "Mont-Ferrant Brut Nature Vintage", Vino.BARRIL, 2010, 2, Vino.SECO, Vino.BLANCO, "España", "imagen2" );
-        cupiCava.agregarVino( "Marqués de Griñon Reserva", Vino.BARRIL, 2000, 7, Vino.ABOCADO, Vino.TINTO, "Toledo, España", "imagen3" );
+        cupiCava.agregarVino( "Mont-Ferrant Brut Nature Vintage", Vino.BARRIL, 2010, 2, Vino.SECO, Vino.BLANCO, "Espaï¿½a", "imagen2" );
+        cupiCava.agregarVino( "Marquï¿½s de Griï¿½on Reserva", Vino.BARRIL, 2000, 7, Vino.ABOCADO, Vino.TINTO, "Toledo, Espaï¿½a", "imagen3" );
         cupiCava.agregarVino( "Camino Real", Vino.BOTELLA, 2008, 15, Vino.SEMI_SECO, Vino.TINTO, "Chile", "imagen4" );
         cupiCava.agregarVino( "Conde de Rioja", Vino.BOTELLA, 2010, 25, Vino.SEMI_SECO, Vino.BLANCO, "Colombia", "imagen5" );
-        cupiCava.agregarVino( "Castillo de Javier", Vino.BOTELLA, 2006, 20, Vino.SEMI_SECO, Vino.ROSADO, "Navarra, España", "imagen6" );
+        cupiCava.agregarVino( "Castillo de Javier", Vino.BOTELLA, 2006, 20, Vino.SEMI_SECO, Vino.ROSADO, "Navarra, Espaï¿½a", "imagen6" );
         cupiCava.agregarVino( "Tavel Aoc", Vino.BOTELLA, 2008, 55, Vino.DULCE, Vino.ROSADO, "Francia", "imagen7" );
     }
 
     /**
-     * Prueba 1: Se encarga de verificar el método constructor de la clase.<br>
-     * <b> Métodos a probar: </b> <br>
+     * Prueba 1: Se encarga de verificar el mï¿½todo constructor de la clase.<br>
+     * <b> Mï¿½todos a probar: </b> <br>
      * darVinos<br>
      * Cava<br>
      * <b> Caso de prueba 1:</b><br>
@@ -91,12 +91,12 @@ public class CupiCavaTest
     public void testCava( )
     {
         assertNotNull( "La lista de vinos no puede ser nula.", cupiCava.darVinos( ) );
-        assertEquals( "La lista de vinos debió crearse vacía.", 0, cupiCava.darVinos( ).size( ) );
+        assertEquals( "La lista de vinos debiï¿½ crearse vacï¿½a.", 0, cupiCava.darVinos( ).size( ) );
     }
 
     /**
-     * Prueba 2: Se encarga de verificar el método agregarVino de la clase.<br>
-     * <b> Métodos a probar: </b> <br>
+     * Prueba 2: Se encarga de verificar el mï¿½todo agregarVino de la clase.<br>
+     * <b> Mï¿½todos a probar: </b> <br>
      * agregarVino<br>
      * darVinos<br>
      * <b> Caso de prueba 1:</b><br>
@@ -111,22 +111,22 @@ public class CupiCavaTest
         assertTrue( "Siempre se debe poder agregar el primer vino.", vinoAgregado );
 
         ArrayList<Vino> vinos = cupiCava.darVinos( );
-        assertEquals( "El vino no se agregó a la lista de vinos.", 1, vinos.size( ) );
+        assertEquals( "El vino no se agregï¿½ a la lista de vinos.", 1, vinos.size( ) );
 
-        // Datos del vino que se agregó en la lista
+        // Datos del vino que se agregï¿½ en la lista
         Vino vino = ( Vino )vinos.get( 0 );
         assertEquals( "El nombre del vino no es el esperado.", "Alamos Chardonnay", vino.darNombre( ) );
-        assertEquals( "La presentación del vino no es la esperada.", Vino.BOTELLA, vino.darPresentacion( ) );
-        assertEquals( "El año de elaboración del vino no es el esperado.", 2006, vino.darAnhoElaboracion( ) );
-        assertEquals( "El contenido en azúcar del vino no es el esperado.", 35.0, vino.darContenidoAzucar( ), 0.01 );
+        assertEquals( "La presentaciï¿½n del vino no es la esperada.", Vino.BOTELLA, vino.darPresentacion( ) );
+        assertEquals( "El aï¿½o de elaboraciï¿½n del vino no es el esperado.", 2006, vino.darAnhoElaboracion( ) );
+        assertEquals( "El contenido en azï¿½car del vino no es el esperado.", 35.0, vino.darContenidoAzucar( ), 0.01 );
         assertEquals( "El tipo del vino no es el esperado.", Vino.SEMI_DULCE, vino.darTipo( ) );
         assertEquals( "El color del vino no es el esperado.", Vino.BLANCO, vino.darColor( ) );
         assertEquals( "El lugar de origen del vino no es el esperado.", "Mendoza, Argentina", vino.darLugarOrigen( ) );
     }
 
     /**
-     * Prueba 3: Se encarga de verificar el método agregarVino de la clase.<br>
-     * <b> Métodos a probar: </b> <br>
+     * Prueba 3: Se encarga de verificar el mï¿½todo agregarVino de la clase.<br>
+     * <b> Mï¿½todos a probar: </b> <br>
      * agregarVino<br>
      * darVinos<br>
      * <b> Caso de prueba 1:</b><br>
@@ -138,26 +138,26 @@ public class CupiCavaTest
         setupEscenario2( );
 
         // Verificar que se haya ingresado el vino
-        boolean vinoAgregado = cupiCava.agregarVino( "Mont-Ferrant", Vino.BARRIL, 2010, 2, Vino.SECO, Vino.BLANCO, "España", "imagen4" );
+        boolean vinoAgregado = cupiCava.agregarVino( "Mont-Ferrant", Vino.BARRIL, 2010, 2, Vino.SECO, Vino.BLANCO, "Espaï¿½a", "imagen4" );
         assertTrue( "Error al agregar el vino", vinoAgregado );
 
         ArrayList<Vino> vinos = cupiCava.darVinos( );
-        assertEquals( "El vino no se agregó a la lista de vinos", 4, vinos.size( ) );
+        assertEquals( "El vino no se agregï¿½ a la lista de vinos", 4, vinos.size( ) );
 
-        // Datos del vino que se agregó en la lista
+        // Datos del vino que se agregï¿½ en la lista
         Vino vino = ( Vino )vinos.get( 3 );
         assertEquals( "El nombre del vino no es el esperado.", "Mont-Ferrant", vino.darNombre( ) );
-        assertEquals( "La presentación del vino no es la esperada.", Vino.BARRIL, vino.darPresentacion( ) );
-        assertEquals( "El año de elaboración del vino no es el esperado.", 2010, vino.darAnhoElaboracion( ) );
-        assertEquals( "El contenido en azúcar del vino no es el esperado.", 2.0, vino.darContenidoAzucar( ), 0.01 );
+        assertEquals( "La presentaciï¿½n del vino no es la esperada.", Vino.BARRIL, vino.darPresentacion( ) );
+        assertEquals( "El aï¿½o de elaboraciï¿½n del vino no es el esperado.", 2010, vino.darAnhoElaboracion( ) );
+        assertEquals( "El contenido en azï¿½car del vino no es el esperado.", 2.0, vino.darContenidoAzucar( ), 0.01 );
         assertEquals( "El tipo del vino no es el esperado.", Vino.SECO, vino.darTipo( ) );
         assertEquals( "El color del vino no es el esperado.", Vino.BLANCO, vino.darColor( ) );
-        assertEquals( "El lugar de origen del vino no es el esperado.", "España", vino.darLugarOrigen( ) );
+        assertEquals( "El lugar de origen del vino no es el esperado.", "Espaï¿½a", vino.darLugarOrigen( ) );
     }
 
     /**
-     * Prueba 4: Se encarga de verificar el método agregarVino de la clase.<br>
-     * <b> Métodos a probar: </b> <br>
+     * Prueba 4: Se encarga de verificar el mï¿½todo agregarVino de la clase.<br>
+     * <b> Mï¿½todos a probar: </b> <br>
      * agregarVino<br>
      * darVinos<br>
      * <b> Caso de prueba 1:</b><br>
@@ -170,13 +170,13 @@ public class CupiCavaTest
 
         // Verificar que no se haya agregado el vino
         boolean vinoAgregado = cupiCava.agregarVino( "Alamos Chardonnay", Vino.BOTELLA, 2006, 35, Vino.SEMI_DULCE, Vino.BLANCO, "Mendoza, Argentina", "nombre" );
-        assertFalse( "No debió haber agregado el vino.", vinoAgregado );
-        assertEquals( "El número de vinos de la cava no debió cambiar.", 3, cupiCava.darVinos( ).size( ) );
+        assertFalse( "No debiï¿½ haber agregado el vino.", vinoAgregado );
+        assertEquals( "El nï¿½mero de vinos de la cava no debiï¿½ cambiar.", 3, cupiCava.darVinos( ).size( ) );
     }
 
     /**
-     * Prueba 5: Se encarga de verificar el método buscarVino de la clase.<br>
-     * <b> Métodos a probar: </b> <br>
+     * Prueba 5: Se encarga de verificar el mï¿½todo buscarVino de la clase.<br>
+     * <b> Mï¿½todos a probar: </b> <br>
      * buscarVino<br>
      * <b> Casos de prueba:</b><br>
      * 1. El vino existe.<br>
@@ -188,67 +188,96 @@ public class CupiCavaTest
         setupEscenario2( );
 
         Vino buscado = cupiCava.buscarVino( "Castillo de Javier" );
-        assertNotNull( "Debió haber encontrado un vino con el nombre dado.", buscado );
+        assertNotNull( "Debiï¿½ haber encontrado un vino con el nombre dado.", buscado );
 
-        assertNull( "No debió haber encontrado un vino con el nombre dado.", cupiCava.buscarVino( "inexistente" ) );
+        assertNull( "No debiï¿½ haber encontrado un vino con el nombre dado.", cupiCava.buscarVino( "inexistente" ) );
     }
 
     /**
-     * Prueba 6: Se encarga de verificar el método ordenarPorNombre de la clase.<br>
-     * <b> Métodos a probar: </b> <br>
+     * Prueba 6: Se encarga de verificar el mï¿½todo ordenarPorNombre de la clase.<br>
+     * <b> Mï¿½todos a probar: </b> <br>
      * ordenarVinosPorNombre<br>
      * compararPorNombre<br>
      * darVinos<br>
      * <b> Casos de prueba:</b><br>
-     * 1. Los vinos no están ordenados.<br>
+     * 1. Los vinos no estï¿½n ordenados.<br>
      */
     @Test
     public void testOrdenarVinosPorNombre( )
     {
         setupEscenario3( );
 
-        
-       	 // TODO Parte2 PuntoQ: Implemente el método para que cumpla los casos de prueba
+     // Ordenar por nombreAdd commentMore actions
+        cupiCava.ordenarVinosPorNombre();
+
+        // Obtener los vinos ordenados
+        ArrayList<Vino> vinos = cupiCava.darVinos();
+
+        // Verificar que estÃ¡n en orden alfabÃ©tico esperado
+        assertEquals("Alamos Chardonnay", vinos.get(0).darNombre());
+        assertEquals("Camino Real", vinos.get(1).darNombre());
+        assertEquals("Castillo de Javier", vinos.get(2).darNombre());
+        assertEquals("Conde de Rioja", vinos.get(3).darNombre());
        
     }
 
     /**
-     * Prueba 7: Se encarga de verificar el método ordenarPorAnhoElaboracion de la clase.<br>
-     * <b> Métodos a probar: </b> <br>
+     * Prueba 7: Se encarga de verificar el mï¿½todo ordenarPorAnhoElaboracion de la clase.<br>
+     * <b> Mï¿½todos a probar: </b> <br>
      * ordenarVinosPorAnhoElaboracion<br>
      * compararPorAnhoElaboracion<br>
      * darVinos<br>
      * <b> Casos de prueba:</b><br>
-     * 1. Los vinos no están ordenados.<br>
+     * 1. Los vinos no estï¿½n ordenados.<br>
      */
     @Test
     public void testOrdenarPorAnhoElaboracion( )
     {
         setupEscenario3( );
 
-        // TODO Parte2 PuntoR: Implemente el método para que cumpla los casos de prueba
+        // Ordenar por aÃ±o de elaboraciÃ³n 
+        cupiCava.ordenarVinosPorAnhoElaboracion();  
+
+        // Obtener los vinos ordenados
+        ArrayList<Vino> vinos = cupiCava.darVinos();
+
+        // Verificar orden esperado (del mÃ¡s antiguo al mÃ¡s reciente)
+        assertEquals(2010, vinos.get(0).darAnhoElaboracion());
+        assertEquals(2010, vinos.get(1).darAnhoElaboracion());
+        assertEquals(2008, vinos.get(2).darAnhoElaboracion());
+        assertEquals(2008, vinos.get(3).darAnhoElaboracion());
+        assertEquals(2006, vinos.get(4).darAnhoElaboracion());
+        assertEquals(2006, vinos.get(5).darAnhoElaboracion());
+        assertEquals(2000, vinos.get(6).darAnhoElaboracion());
     }
 
     /**
-     * Prueba 8: Se encarga de verificar el método ordenarPorLugarOrigen de la clase.<br>
-     * <b> Métodos a probar: </b> <br>
+     * Prueba 8: Se encarga de verificar el mï¿½todo ordenarPorLugarOrigen de la clase.<br>
+     * <b> Mï¿½todos a probar: </b> <br>
      * ordenarVinosPorLugarOrigen<br>
      * compararPorLugarOrigen<br>
      * darVinos<br>
      * <b> Casos de prueba:</b><br>
-     * 1. Los vinos no están ordenados.<br>
+     * 1. Los vinos no estï¿½n ordenados.<br>
      */
     @Test
     public void testOrdenarVinosPorLugarOrigen( )
     {
         setupEscenario3( );
 
-        // TODO Parte2 PuntoS: Implemente el método para que cumpla los casos de prueba
+        // Ordenar por lugar de origenAdd commentMore actions
+        cupiCava.ordenarVinosPorLugarOrigen();
+
+        // Obtener los vinos ordenados
+        ArrayList<Vino> vinos = cupiCava.darVinos();
+     // Verificar orden alfabÃ©tico por lugar de origenAdd commentMore actions
+        assertEquals("Chile", vinos.get(0).darLugarOrigen());
+        assertEquals("Colombia", vinos.get(1).darLugarOrigen());
     }
 
     /**
-     * Prueba 9: Se encarga de verificar el método buscarBinarioPorNombre de la clase.<br>
-     * <b> Métodos a probar: </b> <br>
+     * Prueba 9: Se encarga de verificar el mï¿½todo buscarBinarioPorNombre de la clase.<br>
+     * <b> Mï¿½todos a probar: </b> <br>
      * ordenarVinosPorNombre<br>
      * buscarBinarioPorNombre<br>
      * darNombre<br>
@@ -258,23 +287,23 @@ public class CupiCavaTest
      */
     @Test
     public void testBuscarBinarioPorNombre( )
-    {
+    { 
         setupEscenario3( );
 
         cupiCava.ordenarVinosPorNombre( );
         Vino buscado = cupiCava.buscarBinarioPorNombre( "Conde de Rioja" );
-        assertNotNull( "Debió haber encontrado un vino con el nombre dado.", buscado );
-        assertNull( "No debió haber encontrado un vino con el nombre dado.", cupiCava.buscarBinarioPorNombre( "inexistente" ) );
+        assertNotNull( "Debiï¿½ haber encontrado un vino con el nombre dado.", buscado );
+        assertNull( "No debiï¿½ haber encontrado un vino con el nombre dado.", cupiCava.buscarBinarioPorNombre( "inexistente" ) );
     }
 
     /**
-     * Prueba 10: Se encarga de verificar el método buscarVinoMasDulce de la clase.<br>
-     * <b> Métodos a probar: </b> <br>
+     * Prueba 10: Se encarga de verificar el mï¿½todo buscarVinoMasDulce de la clase.<br>
+     * <b> Mï¿½todos a probar: </b> <br>
      * buscarVinoMasDulce<br>
      * darVinos<br>
      * darNombre<br>
      * <b> Casos de prueba:</b><br>
-     * 1. El vino más dulce existe.<br>
+     * 1. El vino mï¿½s dulce existe.<br>
      */
     @Test
     public void testBuscarVinoMasDulce( )
@@ -283,17 +312,17 @@ public class CupiCavaTest
 
         Vino buscado = cupiCava.buscarVinoMasDulce( );
         Vino dulce = ( Vino )cupiCava.darVinos( ).get( 6 );
-        assertEquals( "El vino más dulce no es el correcto.", dulce.darNombre( ), buscado.darNombre( ) );
+        assertEquals( "El vino mï¿½s dulce no es el correcto.", dulce.darNombre( ), buscado.darNombre( ) );
     }
 
     /**
-     * Prueba 11: Se encarga de verificar el método buscarVinoMasSeco de la clase.<br>
-     * <b> Métodos a probar: </b> <br>
+     * Prueba 11: Se encarga de verificar el mï¿½todo buscarVinoMasSeco de la clase.<br>
+     * <b> Mï¿½todos a probar: </b> <br>
      * buscarVinoMasSeco<br>
      * darVinos<br>
      * darNombre<br>
      * <b> Casos de prueba:</b><br>
-     * 1. El vino más seco existe.<br>
+     * 1. El vino mï¿½s seco existe.<br>
      */
     @Test
     public void testBuscarVinoMasSeco( )
@@ -302,12 +331,12 @@ public class CupiCavaTest
 
         Vino buscado = cupiCava.buscarVinoMasSeco( );
         Vino seco = ( Vino )cupiCava.darVinos( ).get( 1 );
-        assertEquals( "El vino más seco no es el correcto.", seco.darNombre( ), buscado.darNombre( ) );
+        assertEquals( "El vino mï¿½s seco no es el correcto.", seco.darNombre( ), buscado.darNombre( ) );
     }
 
     /**
-     * Prueba 12: Se encarga de verificar el método buscarVinosDeTipo de la clase.<br>
-     * <b> Métodos a probar: </b> <br>
+     * Prueba 12: Se encarga de verificar el mï¿½todo buscarVinosDeTipo de la clase.<br>
+     * <b> Mï¿½todos a probar: </b> <br>
      * buscarVinosDeTipo<br>
      * darTipo<br>
      * <b> Casos de prueba:</b><br>
@@ -319,7 +348,7 @@ public class CupiCavaTest
         setupEscenario3( );
 
         ArrayList<Vino> vinos = cupiCava.buscarVinosDeTipo( Vino.DULCE );
-        assertEquals( "No se realizó la búsqueda correctamente.", 1, vinos.size( ) );
+        assertEquals( "No se realizï¿½ la bï¿½squeda correctamente.", 1, vinos.size( ) );
 
         for( int i = 0; i < vinos.size( ); i++ )
         {
@@ -328,7 +357,7 @@ public class CupiCavaTest
         }
 
         vinos = cupiCava.buscarVinosDeTipo( Vino.SEMI_SECO );
-        assertEquals( "No se realizó la búsqueda correctamente.", 3, vinos.size( ) );
+        assertEquals( "No se realizo la busqueda correctamente.", 3, vinos.size( ) );
 
         for( int i = 0; i < vinos.size( ); i++ )
         {

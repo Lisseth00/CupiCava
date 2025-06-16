@@ -1,6 +1,6 @@
 /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- * Universidad de los Andes (Bogotá - Colombia)
- * Departamento de Ingeniería de Sistemas y Computación 
+ * Universidad de los Andes (Bogotï¿½ - Colombia)
+ * Departamento de Ingenierï¿½a de Sistemas y Computaciï¿½n 
  * Licenciado bajo el esquema Academic Free License version 2.1 
  *
  * Proyecto Cupi2 (http://cupi2.uniandes.edu.co)
@@ -29,12 +29,12 @@ public class PanelExtension extends JPanel implements ActionListener
     // -----------------------------------------------------------------
 
     /**
-     * Constante que representa el comando de opción 1.
+     * Constante que representa el comando de opciï¿½n 1.
      */
     private static final String OPCION_1 = "OPCION_1";
 
     /**
-     * Constante que representa el comando de opción 2.
+     * Constante que representa el comando de opciï¿½n 2.
      */
     private static final String OPCION_2 = "OPCION_2";
 
@@ -43,7 +43,7 @@ public class PanelExtension extends JPanel implements ActionListener
     // -----------------------------------------------------------------
 
     /**
-     * Ventana principal de la aplicación.
+     * Ventana principal de la aplicaciï¿½n.
      */
     private InterfazCupiCava principal;
 
@@ -52,12 +52,12 @@ public class PanelExtension extends JPanel implements ActionListener
     // -----------------------------------------------------------------
 
     /**
-     * Botón para Opción 1.
+     * Botï¿½n para Opciï¿½n 1.
      */
     private JButton btnOpcion1;
 
     /**
-     * Botón para Opción 2.
+     * Botï¿½n para Opciï¿½n 2.
      */
     private JButton btnOpcion2;
 
@@ -67,7 +67,7 @@ public class PanelExtension extends JPanel implements ActionListener
 
     /**
      * Constructor del panel.
-     * @param pPrincipal Ventana principal de la aplicación. pPrincipal != null.
+     * @param pPrincipal Ventana principal de la aplicaciï¿½n. pPrincipal != null.
      */
     public PanelExtension( InterfazCupiCava pPrincipal )
     {
@@ -76,30 +76,30 @@ public class PanelExtension extends JPanel implements ActionListener
         setBorder( new TitledBorder( "Extensiones" ) );
         setLayout( new GridLayout( 1, 2 ) );
 
-        btnOpcion1 = new JButton( "Opción 1" );
+        btnOpcion1 = new JButton( "OpciÃ³n 1" );
         btnOpcion1.setActionCommand( OPCION_1 );
         btnOpcion1.addActionListener( this );
         add( btnOpcion1 );
 
-        btnOpcion2 = new JButton( "Opción 2" );
+        btnOpcion2 = new JButton( "OpciÃ³n 2" );
         btnOpcion2.setActionCommand( OPCION_2 );
         btnOpcion2.addActionListener( this );
         add( btnOpcion2 );
     }
 
     // -----------------------------------------------------------------
-    // Métodos
+    // Mï¿½todos
     // -----------------------------------------------------------------
 
     /**
      * Manejo de los eventos de los botones.
-     * @param pEvento Acción que generó el evento.
+     * @param pEvento Acciï¿½n que generï¿½ el evento.
      */
     public void actionPerformed( ActionEvent pEvento )
     {
         if( OPCION_1.equals( pEvento.getActionCommand( ) ) )
         {
-            principal.reqFuncOpcion1( );
+            principal.reqFuncOpcion1( ); 
         }
         else if( OPCION_2.equals( pEvento.getActionCommand( ) ) )
         {
